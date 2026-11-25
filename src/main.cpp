@@ -1,5 +1,4 @@
 #include <cmath>
-#include <iostream>
 #include <vector>
 #include "dots.h"
 #include "cube.h"
