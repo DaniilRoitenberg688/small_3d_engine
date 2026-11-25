@@ -1,76 +1,85 @@
 
 # Table of Contents
 
-1.  [Features](#orgdc8017a)
-2.  [Requirements](#orgeff18b6)
-3.  [Instalation](#org3455b98)
-4.  [Usage](#orga080528)
-    1.  [Build](#org323a188)
-    2.  [Run](#org73b88b2):ATTACH:
-5.  [Screenshots](#org9851c61)
-6.  [](#org7f90bb9)
+1.  [Tiny 3D engine](#org7f86a76)
+    1.  [Features](#org61bce70)
+    2.  [Requirements](#org148e8b8)
+    3.  [Instalation](#org50f59e7)
+    4.  [Usage](#org9444060)
+        1.  [Build](#org103fec4)
+        2.  [Run](#org722964a)
+    5.  [](#orgb5c8ed1)
+    6.  [Example](#orgee012f6)
 
 
 
-<a id="orgdc8017a"></a>
+<a id="org7f86a76"></a>
 
-# Features
+# Tiny 3D engine
 
--   Drawing cubes (more objects in the future)
--   Moving in the world
--   Camera rotating
+Tiny 3D engine build in c++ for exploring 3d rendering.
 
 
-<a id="orgeff18b6"></a>
+<a id="org61bce70"></a>
 
-# Requirements
+## Features
+
+-   Drawing cubes
+-   Moving around (WASD)
+-   Camera rotating (arrow keys)
+
+
+<a id="org148e8b8"></a>
+
+## Requirements
 
 -   C++17
 -   CMake 3.20+
 -   [raylib](https://www.raylib.com/) 5.5 or newer
 
 
-<a id="org3455b98"></a>
+<a id="org50f59e7"></a>
 
-# Instalation
+## Instalation
 
     git clone https://github.com/DaniilRoitenberg688/small_3d_engine.git
     cd small_3d_engine/
 
 
-<a id="orga080528"></a>
+<a id="org9444060"></a>
 
-# Usage
+## Usage
 
 
-<a id="org323a188"></a>
+<a id="org103fec4"></a>
 
-## Build
+### Build
 
     make configure
     make build
 
 
-<a id="org73b88b2"></a>
+<a id="org722964a"></a>
 
-## Run     :ATTACH:
+### Run
 
     make run
 
 
-<a id="org9851c61"></a>
+<a id="orgb5c8ed1"></a>
 
-# Screenshots
-
-![img](assets/example.png "screenshot")
-
-
-<a id="org7f90bb9"></a>
-
-# TODO 
+## TODO 
 
 -   More objects
+-   Improve moving
 -   Advanced faces drawing
 -   Light
 -   Physics
+
+
+<a id="orgee012f6"></a>
+
+## Example
+
+![img](assets/example.png "screenshot")
 
