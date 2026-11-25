@@ -1,5 +1,6 @@
 #pragma once
 #include <tuple>
+#include "rotation.h"
 
 struct dot3D {
     float x;
@@ -18,6 +19,6 @@ std::tuple<int, int> prepare_dot_for_drawing(dot2D dot);
 dot2D convert_3D_to_2D(dot3D d);
 
 
-void rotate_dot (dot3D& d, float angle, dot3D center);
+dot3D rotate_point(dot3D center, dot3D point, rotation rot);
 
 void draw_dot(dot3D d);

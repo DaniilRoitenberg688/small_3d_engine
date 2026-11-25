@@ -2,6 +2,7 @@
 #include <cmath>
 #include "constants.h"
 #include "raylib.h"
+#include "rotation.h"
 
 
 dot2D convert_3D_to_2D(dot3D d) {
@@ -18,14 +19,34 @@ std::tuple<int, int> prepare_dot_for_drawing(dot2D dot) {
 }
 
 
-void rotate_dot (dot3D& d, float angle, dot3D center) {
-    float old_x = d.x - center.x;
-    float old_y = d.y - center.y;
-    float old_z = d.z - center.z;
+dot3D rotate_point(dot3D center, dot3D point, rotation rot) {
+    float x = point.x - center.x;
+    float y = point.y - center.y;
+    float z = point.z - center.z;
 
-    d.x = old_x * cos(angle) + old_z * sin(angle) + center.z;
-    d.y = old_y + center.y;
-    d.z = -old_x * sin(angle) + old_z * cos(angle) + center.z;
+    // X
+    float y1 = y * cosf(rot.angle_x) - z * sinf(rot.angle_x);
+    float z1 = y * sinf(rot.angle_x) + z * cosf(rot.angle_x);
+    y = y1;
+    z = z1;
+
+    // Y
+    float x1 = x * cosf(rot.angle_y) + z * sinf(rot.angle_y);
+    float z2 = -x * sinf(rot.angle_y) + z * cosf(rot.angle_y);
+    x = x1;
+    z = z2;
+
+    // Z
+    float x2 = x * cosf(rot.angle_z) - y * sinf(rot.angle_z);
+    float y2 = x * sinf(rot.angle_z) + y * cosf(rot.angle_z);
+    x = x2;
+    y = y2;
+
+    return {
+        x + center.x,
+        y + center.y,
+        z + center.z
+    };
 }
 
 
