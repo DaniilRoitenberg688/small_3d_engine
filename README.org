@@ -1,3 +1,4 @@
+#+OPTIONS: toc:nil
 #+title: Tiny 3D engine
 #+description: Tiny 3D engine build in c++ for exploring 3d rendering.
 
