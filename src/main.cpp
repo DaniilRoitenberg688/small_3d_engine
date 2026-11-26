@@ -38,7 +38,7 @@ int main() {
 
 
     std::vector<dot3D> centers = {
-        {0, 0, 2},
+    {0, 0, 2},
         {1, 0, 2},
         {-1, 0, 2},
         {-1, 1, 2},
@@ -79,7 +79,6 @@ int main() {
         if (IsKeyDown(KEY_LEFT)) {
             camera_rotation.angle_y -= 1 * GetFrameTime();
         }
-        DisableCursor();
         ClearBackground(BLACK);
         draw_cubes(cubes);
         // rotate_dots(angle);

@@ -24,23 +24,19 @@ dot3D rotate_point(dot3D center, dot3D point, rotation rot) {
     float y = point.y - center.y;
     float z = point.z - center.z;
 
-    // X
-    float y1 = y * cosf(rot.angle_x) - z * sinf(rot.angle_x);
-    float z1 = y * sinf(rot.angle_x) + z * cosf(rot.angle_x);
-    y = y1;
-    z = z1;
-
     // Y
     float x1 = x * cosf(rot.angle_y) + z * sinf(rot.angle_y);
-    float z2 = -x * sinf(rot.angle_y) + z * cosf(rot.angle_y);
-    x = x1;
-    z = z2;
+    float z1 = -x * sinf(rot.angle_y) + z * cosf(rot.angle_y);
 
-    // Z
-    float x2 = x * cosf(rot.angle_z) - y * sinf(rot.angle_z);
-    float y2 = x * sinf(rot.angle_z) + y * cosf(rot.angle_z);
-    x = x2;
-    y = y2;
+    x = x1;
+    z = z1;
+
+    // X
+    float y1 = y * cosf(rot.angle_x) - z * sinf(rot.angle_x);
+    float z2 = y * sinf(rot.angle_x) + z * cosf(rot.angle_x);
+
+    y = y1;
+    z = z2;
 
     return {
         x + center.x,

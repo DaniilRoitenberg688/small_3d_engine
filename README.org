@@ -5,6 +5,8 @@
 
 * Tiny 3D engine
 Tiny 3D engine build in c++ for exploring 3d rendering.
+I always wanted to build something like that because it looks cool and really hard to recreate.
+And now i am slowly reaching my goal.
 
 ** Features
 - Drawing cubes
